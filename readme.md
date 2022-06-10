@@ -112,18 +112,37 @@ B. Dashboarding and Analytics
 <hr>
 
 C. Data Inegration, APIs, System Analysis, Databases, Data Pipelines, User-level Profiles
-What de we have at the User level?
-Is ther a User? 
-Is it our consumer?
-Can we create a User profile?
+- What de we have at the User level?
+- Is there a User? 
+- Is it our consumer? Such as who we lend to
+A. Can we create a User profile?
+  - what would make the User profie "rich"?
+  - the original concept
+    - history of stays
+    - promoter score (external)
+    - internal survey score
+    - sentiment analysis score
+    - other preferences
+    - Is this just demoraphic data?
+      - https://www.yieldify.com/blog/types-of-market-segmentation/
+      - demographic, psychographic, geographic, behavioral
+    - also, show when their "NEXT STAY" is (maybe ike a prediction on what they will be and when
+    - also shows a level, or loyalty to location and brand (maybe akin to a a portfolio weighted in certain industries and sub industries
+      - how are industries broken down?
+      - https://www.investopedia.com/terms/s/sector-breakdown.asp#:~:text=our%20editorial%20policies-,What%20Is%20a%20Sector%20Breakdown%3F,investment%20criteria%20and%20overall%20objective.
+      - GICS Sector
+      - https://www.investopedia.com/terms/g/gics.asp
+      - https://eresearch.fidelity.com/eresearch/markets_sectors/sectors/sectors_in_market.jhtml
+      - https://www.ilo.org/global/industries-and-sectors/lang--en/index.htm
+B. APIs
 
 
 <hr>
 
 ** Extra **
-Where can you incorporate Machine Leaning and Neural Networs into this?
-Could a transformer model be explored and used here in anyway?
-What about fourier wave transformation for input data?
-If there is a way to include this a multi-step prediciton model woul dbe best
+1. Where can you incorporate Machine Leaning and Neural Networs into this?
+1. Could a transformer model be explored and used here in anyway?
+1. What about fourier wave transformation for input data?
+1. If there is a way to include this a multi-step prediciton model woul dbe best
 - that is, when you run the preduciton _once_ you get multiple time-steps ahead predicted
 - alternatively, you feed in a series and gt out a series (fixed length or otherwise)
