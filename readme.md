@@ -115,7 +115,7 @@ C. Data Inegration, APIs, System Analysis, Databases, Data Pipelines, User-level
 - What de we have at the User level?
 - Is there a User? 
 - Is it our consumer? Such as who we lend to
-A. Can we create a User profile?
+1. Can we create a User profile?
   - what would make the User profie "rich"?
   - the original concept
     - history of stays
@@ -134,7 +134,8 @@ A. Can we create a User profile?
       - https://www.investopedia.com/terms/g/gics.asp
       - https://eresearch.fidelity.com/eresearch/markets_sectors/sectors/sectors_in_market.jhtml
       - https://www.ilo.org/global/industries-and-sectors/lang--en/index.htm
-B. APIs
+2. APIs
+- here's where datafeeds come in
 
 
 <hr>
