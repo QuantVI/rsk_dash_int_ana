@@ -135,8 +135,80 @@ C. Data Inegration, APIs, System Analysis, Databases, Data Pipelines, User-level
       - https://eresearch.fidelity.com/eresearch/markets_sectors/sectors/sectors_in_market.jhtml
       - https://www.ilo.org/global/industries-and-sectors/lang--en/index.htm
 2. APIs
-- here's where datafeeds come in
+  - here's where datafeeds come in
+  - We have to use Yahoo Finance - but this is just a csv download endpoint (or a function call from a package)
+  - What about Polish Stooq - but this is most likely just scraping
+    - Is the Polish market useful for us?
+    - Does it specialize in anything?
+  - Then there's Inded, which ha sa true API.
+    - The API endpoint exists. We would need to ake our own functionailty to interact with it
+    - At the least, we'd need to understand the API calls and what they return to faciitate what we need
+    - Indeed could be used for job-availability-proxy data, for potential borrowers
+    - We could also hunt down employer reputations from here, e.g. rating score on a 5 point scale
+    - We could also get sentiment form here and score it
+  - Glassdoor
+    - another potential locaton for employer ratings, sentiment, and job availability, e.g. soft local economy score
+  - LinkedIn
+    - In addition to jobs data, this oculd be a chance to do the "name association" thing
+    - Name Association: What top 5 jobs do people with your name usually have?
+      - that job can be ranked, and put into an estimate salary range using sites like this
+      - the estimated salary can be a proxy for "luck in life", and be a favorable factor in lending
+      - I thikn LinkedIn has an API
+  - With a true API, scraping, and csv download, we've covered "integration"
+  - However, we should integrated, or build to integrate to 2 true APIs at least
+    - in  the first pass version, this can be skipped or done csv/extract style
+  - This is a good place to make a database decision, and it combines with the Part-A "UACC" stuff.
+    - should we stick with SQLite since it can be made on-the-fly and saved to disk?
+    - Also with SQLite we don't need the SQL GU front-end, so no need for MySQL
+    - Can Python made postgreSQL compliant db files?
+      - go chance to learn PostrgeSQL variant. Does it have windowing functions?
+    - ElasticSearch: How hard would t be to reate an ES-compliant database?
+      - what would we be searching in the first place?
+      - should the user profiles live here? It is JSON. Easy diplay, and compatibility with a web front-end
+      - How does Github render raw JSON?
+  - We're going to need an object model and schema setup. 
+    - What information shoud objects hold?
+    - What are our main objects?
+    - How should the detaled information be split?
+    - Star-schema?
+  - Can you push to database by making changes in the front-end?
+  - Dataflow:
+    - what is the order of operations for data entering the system?
+    - Are the transformations?
+    - Does ingestion + transformation = pipeline?
+    - Which systems shuold be upstream or downtream?
+    - **UNDO** ! There needs to be a way to backout changes at various object and hierarchy levels.
+    - In addiotn to an object model and a database schema, we need an ENTITY?? model.
+      - our major systems or "services" will have names, and need to connect to each other in certain ways
+      - uh oh don't microservice everything.
+      - this requires a diagram
+    - Ingestion: We probably need a data ingestion queuing system ,like RabbitMQ or somethig similar and much simpler
+      - Does ingestion queue + ingestion order = data pipeline?
+    - **Systems Analyst**
+      - The system itself needs metrics, monitoring, data quality checks, and snapshots along the beginning to end of the flow of data
 
+<hr>
+
+D. Quantitative Risk Analysis and Management
+  - Last (ignore the macine learning extras) but not least.
+  - This is what we're trying to build for
+  - Alpha, Beta, Smart Beta, Tracking Error, etc <-- when are these used in concert with one another?
+    - clealry these are portfolio metrics, but for what type(s) or portfolio(s)?
+    - When is portfolio management used instead of risk manangement?
+    - When would we care about tracking error (Port Man), instead of vol VaE and ES (Risk Man)?
+  - FRTB
+    - what are your risk-facotrs and exposures?
+    - How do you measure them?
+    - How are they quantified?
+    - Are you passing modellability and liquidity tests?
+    - What are your trading versus banking? i.e. short-term vs holdings
+  - You need a pricer.
+    - Price vechile assets based on???
+    - Price equities, derivatives, etc
+      - what models will you use?
+      - will you model all of your risk factors? volatility, rate, underlying, volume?
+    - Sensitivity and Sensitivity Analysis
+    - Scenario Analysis - essentially stress-testing
 
 <hr>
 
