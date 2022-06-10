@@ -41,7 +41,9 @@ Quantitative Analysis
 
 II. Ideas and Connections
 
-Debt Instrument - Loan Portfolio
+<hr>
+
+A. Debt Instrument - Loan Portfolio
 - connection to the stock prices of he vehices involved
 - there is also credit exposure here. borrowers have credit scores.
 - how much can you as a bank lose on defaulting loans, and still make money?
@@ -70,5 +72,27 @@ Debt Instrument - Loan Portfolio
   - how can the defaulr risk of YOUR firm itself be asessed?
   - if you have a defualt risk, then this would be applied to your CVA for other types of financing you might enter into 
 
+<hr>
 
+B. Dashboarding and Analytics
+- Evergreen, industry-less, industry-agnotic metrics about our first set of data: the vehicle assets
+- Three addressed-dimension graphs, that use size, color, and or position to add additional dimensionf of comparison to a 2D plot
+- seaborn, or plotly or matplotlib
+- what are the best types of monochrome or grey-scale (max 4 shades) graphs?
+- FUNNEL?
+  - is there a customer funnel we can elaborate on, such as the path to vehicle purchase over a certain time, and cross-sectionally?
+  - can we simulate some sort of A/B test?
+    - what would A and B, be?
+    - what uplift would we be trying to show/prove?
+  - display - impression - views - click - homepage - item page - add to cart - abandon cart - order - sale
+  - acqusition cost
+  - ratio of any two (adjacent) items in the path, and it's reciprocal if meaningful
+- Can we A/B test strategies in our portfolio?
+  - how woud you replicae the idea of "users" only being in one group or the other?
+  - Maybe a blind split of all securities of the market A1/B1 versus a definitive split based on
+    - strategy
+    - criteria
+    - market, price, or value driver
+- Is there a "simple segments" behaviors (vs user-identified) concept we can incorporate?
+  - Visitor, Browser, Customer, Abandon Cart ??
 
