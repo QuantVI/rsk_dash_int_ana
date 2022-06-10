@@ -109,8 +109,16 @@ B. Dashboarding and Analytics
 - https://medium.com/geekculture/how-to-forecast-sales-with-advertising-spend-in-r-36e6fc99760a
 - Look up causal models for sales projecion/prediciton
 
+<hr>
+
+C. Data Inegration, APIs, System Analysis, Databases, Data Pipelines, User-level Profiles
+What de we have at the User level?
+Is ther a User? 
+Is it our consumer?
+Can we create a User profile?
 
 
+<hr>
 
 ** Extra **
 Where can you incorporate Machine Leaning and Neural Networs into this?
