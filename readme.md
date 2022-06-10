@@ -95,4 +95,18 @@ B. Dashboarding and Analytics
     - market, price, or value driver
 - Is there a "simple segments" behaviors (vs user-identified) concept we can incorporate?
   - Visitor, Browser, Customer, Abandon Cart ??
+  - ( Browsers, Customers, Shoppers, and Abandoned Cart.) is the official simple segmentation from back then.
+- Could there be a behavioral component to the people we lend to?
+  - for example, on-time payment for people in certain groups lead to forebearance periods, or slightly lowered premiums?
+- Statistical significance of A/B tests
+  - sample means comparison
+  - sample variances comparison. ANOVA?
+- Sales projection.
+  - if X dollars created Y sales, then is there a non-linear way to predict what 2X or 3X dollars would lead to?
+  - would this involve time-series, or just a function of all the funnel inputs/parameters?
+- ARIMA forecast
+- Contribution margin
+- https://medium.com/geekculture/how-to-forecast-sales-with-advertising-spend-in-r-36e6fc99760a
+
+
 
