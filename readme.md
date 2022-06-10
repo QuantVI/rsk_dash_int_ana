@@ -107,6 +107,15 @@ B. Dashboarding and Analytics
 - ARIMA forecast
 - Contribution margin
 - https://medium.com/geekculture/how-to-forecast-sales-with-advertising-spend-in-r-36e6fc99760a
+- Look up causal models for sales projecion/prediciton
 
 
 
+
+** Extra **
+Where can you incorporate Machine Leaning and Neural Networs into this?
+Could a transformer model be explored and used here in anyway?
+What about fourier wave transformation for input data?
+If there is a way to include this a multi-step prediciton model woul dbe best
+- that is, when you run the preduciton _once_ you get multiple time-steps ahead predicted
+- alternatively, you feed in a series and gt out a series (fixed length or otherwise)
