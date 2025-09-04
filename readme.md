@@ -153,36 +153,36 @@ C. Data Inegration, APIs, System Analysis, Databases, Data Pipelines, User-level
     - Name Association: What top 5 jobs do people with your name usually have?
       - that job can be ranked, and put into an estimate salary range using sites like this
       - the estimated salary can be a proxy for "luck in life", and be a favorable factor in lending
-      - I thikn LinkedIn has an API
+      - I think LinkedIn has an API
   - With a true API, scraping, and csv download, we've covered "integration"
   - However, we should integrated, or build to integrate to 2 true APIs at least
     - in  the first pass version, this can be skipped or done csv/extract style
   - This is a good place to make a database decision, and it combines with the Part-A "UACC" stuff.
     - should we stick with SQLite since it can be made on-the-fly and saved to disk?
     - Also with SQLite we don't need the SQL GU front-end, so no need for MySQL
-    - Can Python made postgreSQL compliant db files?
-      - go chance to learn PostrgeSQL variant. Does it have windowing functions?
-    - ElasticSearch: How hard would t be to reate an ES-compliant database?
+    - Can Python made PostgreSQL compliant db files?
+      - go chance to learn PostgreSQL variant. Does it have windowing functions?
+    - ElasticSearch: How hard would t be to relate an ES-compliant database?
       - what would we be searching in the first place?
-      - should the user profiles live here? It is JSON. Easy diplay, and compatibility with a web front-end
+      - should the user profiles live here? It is JSON. Easy diwplay, and compatibility with a web front-end
       - How does Github render raw JSON?
   - We're going to need an object model and schema setup. 
-    - What information shoud objects hold?
+    - What information should objects hold?
     - What are our main objects?
-    - How should the detaled information be split?
+    - How should the detailed information be split?
     - Star-schema?
   - Can you push to database by making changes in the front-end?
   - Dataflow:
     - what is the order of operations for data entering the system?
     - Are the transformations?
     - Does ingestion + transformation = pipeline?
-    - Which systems shuold be upstream or downtream?
-    - **UNDO** ! There needs to be a way to backout changes at various object and hierarchy levels.
-    - In addiotn to an object model and a database schema, we need an ENTITY?? model.
+    - Which systems should be upstream or downstream?
+    - **UNDO** ! There needs to be a way to back-out changes at various object and hierarchy levels.
+    - In addition to an object model and a database schema, we need an ENTITY?? model.
       - our major systems or "services" will have names, and need to connect to each other in certain ways
       - uh oh don't microservice everything.
       - this requires a diagram
-    - Ingestion: We probably need a data ingestion queuing system ,like RabbitMQ or somethig similar and much simpler
+    - Ingestion: We probably need a data ingestion queuing system ,like RabbitMQ or something similar and much simpler
       - Does ingestion queue + ingestion order = data pipeline?
     - **Systems Analyst**
       - The system itself needs metrics, monitoring, data quality checks, and snapshots along the beginning to end of the flow of data
@@ -190,32 +190,32 @@ C. Data Inegration, APIs, System Analysis, Databases, Data Pipelines, User-level
 <hr>
 
 D. Quantitative Risk Analysis and Management
-  - Last (ignore the macine learning extras) but not least.
+  - Last (ignore the machine learning extras) but not least.
   - This is what we're trying to build for
   - Alpha, Beta, Smart Beta, Tracking Error, etc <-- when are these used in concert with one another?
-    - clealry these are portfolio metrics, but for what type(s) or portfolio(s)?
-    - When is portfolio management used instead of risk manangement?
-    - When would we care about tracking error (Port Man), instead of vol VaE and ES (Risk Man)?
+    - clearly these are portfolio metrics, but for what type(s) or portfolio(s)?
+    - When is portfolio management used instead of risk management?
+    - When would we care about tracking error (Port Man), instead of vol VaR and ES (Risk Man)?
   - FRTB
-    - what are your risk-facotrs and exposures?
+    - what are your risk-factors and exposures?
     - How do you measure them?
     - How are they quantified?
     - Are you passing modellability and liquidity tests?
     - What are your trading versus banking? i.e. short-term vs holdings
   - You need a pricer.
-    - Price vechile assets based on???
-    - Price equities, derivatives, etc
+    - Price vehicle assets based on???
+    - Price equities, derivatives, etc.
       - what models will you use?
       - will you model all of your risk factors? volatility, rate, underlying, volume?
     - Sensitivity and Sensitivity Analysis
     - Scenario Analysis - essentially stress-testing
 
 <hr>
+**Extra**
 
-** Extra **
-1. Where can you incorporate Machine Leaning and Neural Networs into this?
+1. Where can you incorporate Machine Leaning and Neural Networks into this?
 1. Could a transformer model be explored and used here in anyway?
-1. What about fourier wave transformation for input data?
-1. If there is a way to include this a multi-step prediciton model woul dbe best
-- that is, when you run the preduciton _once_ you get multiple time-steps ahead predicted
-- alternatively, you feed in a series and gt out a series (fixed length or otherwise)
+1. What about Fourier wave transformation for input data?
+1. If there is a way to include this a multi-step prediction model would be best
+- that is, when you run the prediction _once_ you get multiple time-steps ahead predicted
+- alternatively, you feed in a series and get out a series (fixed length or otherwise)
